@@ -27,3 +27,9 @@ awk '{if ($3== "exon") print $1 "\t" $4 "\t" $5 "\t" $12 "\t" "." "\t" $7 "\t" \
      > Exons.bed
 
 python curate-introns.py Exons.bed > Introns.bed
+
+awk '{print $1 "\t" $2 "\t" $3}' Genes.bed | sort -k1,1 -k2,2n > sorted
+bedtools merge -i sorted > merged
+
+python curate-intergenic-regions.py merged
+rm merged sorted
