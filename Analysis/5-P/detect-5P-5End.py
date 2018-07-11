@@ -3,10 +3,9 @@
 #UMass Medical School
 #Updated Aug 2016
 
-#Script for determining statistical significance of 3' hydroxyl pileups at position +1 of s pombe introns
+#Script for determining statistical significance of 5' phosphate pileups at position +1 of s pombe introns
 #Run as:
-#python detect-5P-5END-fixed.py ~/Lab/Reference/SPombe/Intron.Dictionary WT_I.All.bam > WT_I.3OH.binomial
-
+#python detect-5P-5END.py introns.bed data.bam > data.output
 
 import sys, pysam, re, numpy, scipy.stats
 from scipy.stats import binom_test

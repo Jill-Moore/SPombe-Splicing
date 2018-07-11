@@ -1,3 +1,12 @@
+#Jill E Moore
+#Weng Lab 
+#UMass Medical School
+#Updated Aug 2016
+
+#Script for determining statistical significance of 5' phosphate pileups at position +1 of s pombe introns
+#Run as:
+#python detect-5P-5END.py regions.bed data.bam > data.output
+
 import sys, pysam, re, numpy, scipy.stats
 from scipy.stats import binom_test
 from math import erf,sqrt
