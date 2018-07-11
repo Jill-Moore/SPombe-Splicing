@@ -5,7 +5,7 @@
 
 #Script for determining statistical significance of 3' hydroxyl pileups at position -1 of s pombe introns
 #Run as:
-#python binomial.test.3OH.py ~/Lab/Reference/SPombe/Intron.Dictionary WT_I.All.bam > WT_I.3OH.binomial
+#python detect-3OH-3END.py introns.bed data.bam > data.output
 
 
 import sys, pysam, re, numpy, scipy.stats

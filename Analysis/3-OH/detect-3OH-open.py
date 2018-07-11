@@ -1,3 +1,12 @@
+#Jill E Moore
+#Weng Lab 
+#UMass Medical School
+#Updated Aug 2016
+
+#Script for determining statistical significance of 3' hydroxyl pileups across all positions of genomic regions
+#Run as:
+#python detect-3OH-open.py regions.bed data.bam > data.output
+
 import sys, pysam, re, numpy, scipy.stats
 from scipy.stats import binom_test
 from math import erf,sqrt
